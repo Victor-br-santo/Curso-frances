@@ -878,3 +878,162 @@ nav a {
   border-right: 10px solid transparent;
   border-top: 14px solid #ff2e2e;
 }
+
+.problema {
+  background: linear-gradient(90deg, #0b2757 50%, #ffffff 50%);
+  color: #fff;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.problema-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.lado-esquerdo,
+.lado-direito {
+  flex: 1;
+  min-width: 300px;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.lado-esquerdo {
+  background-color: rgba(10, 46, 109, 0.9);
+}
+
+.lado-direito {
+  background-color: #fff;
+  color: #0b2757;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.problema h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #e63946;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.problema p {
+  font-size: bold;
+  margin-bottom: 20px;
+
+}
+
+.problema ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.problema li {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  color: #e63946;
+  flex-shrink: 0;
+}
+
+.icon.success {
+  color: #2ecc71;
+}
+
+/* Hover */
+.lado-esquerdo:hover, .lado-direito:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+}
+
+/* === Responsivo === */
+@media (max-width: 768px) {
+  .problema {
+    background: #0b2757;
+    padding: 60px 20px;
+  }
+
+  .problema-container {
+    flex-direction: column;
+  }
+
+  .lado-esquerdo, .lado-direito {
+    border-radius: 15px;
+    margin-bottom: 25px;
+  }
+
+  .problema h2 {
+    text-align: center;
+  }
+
+  .problema p, .problema ul {
+    text-align: center;
+  }
+
+  .problema li {
+    justify-content: center;
+  }
+}
+
+
+
+
+.fundo-frances {
+  position: relative;
+  overflow: hidden;
+}
+
+/* padrão base */
+.fundo-frances::before {
+  position: absolute;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.08);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  pointer-events: none;
+  content: "";
+}
+
+.hero.fundo-frances::before {
+  content: "Bonjour";
+  top: 20%;
+  left: 10%;
+  font-size: 8rem;
+  transform: rotate(-10deg);
+}
+
+.problema.fundo-frances::before {
+  content: "Pourquoi pas?";
+  top: 40%;
+  right: 5%;
+  font-size: 6rem;
+  transform: rotate(8deg);
+}
+
+.tipos-frances.fundo-frances::before {
+  content: "Français";
+  bottom: 60%;
+  left: 40%;
+  font-size: 9rem;
+  transform: rotate(0deg);
+}
+
+.depoimentos.fundo-frances::before {
+  content: "Liberté Éducation";
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%) rotate(-5deg);
+  font-size: 7rem;
+}
