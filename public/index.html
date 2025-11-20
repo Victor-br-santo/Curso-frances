@@ -279,47 +279,107 @@
     </div>
   </section>
 
+  <section class="faq" id="faq">
+    <div class="faq-container">
+      <h2>Perguntas Frequentes</h2>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Quanto tempo leva para eu começar a falar francês?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>A maioria dos alunos começa a formar frases simples nas primeiras 4–6 semanas,
+            seguindo corretamente o método e fazendo as atividades propostas.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Preciso saber algo antes de começar o curso?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Não! O curso foi criado para iniciantes completos. Você aprende desde o zero e avança
+            até o nível intermediário de conversação.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          O certificado é reconhecido?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Sim. Ao concluir o curso você recebe um certificado com carga horária e validade
+            nacional para fins curriculares e acadêmicos.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Terei acesso vitalício ao conteúdo?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Sim! Uma vez inscrito, o conteúdo fica disponível permanentemente para você assistir
+            quando quiser, no seu próprio ritmo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="duvida">
+  <div class="duvida-box">
+    <div class="duvida-texto">
+      <h2>Ainda em dúvida?</h2>
+      <p>
+        Tire todas as suas dúvidas antes de começar!  
+        Nosso curso de francês foi desenvolvido especialmente para quem deseja 
+        aprender do zero até a conversação, com suporte, acompanhamento e 
+        metodologia comprovada.
+      </p>
+
+      <a href="#inscricao" class="btn-duvida">Quero garantir minha vaga</a>
+    </div>
+
+    <div class="duvida-foto">
+      <img src="IMAGEM_DO_PROFESSOR.png" alt="Professor">
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-col">
+      <h3>Curso de Francês</h3>
+      <p>Aprenda francês do zero ao avançado com método direto e acompanhamento real.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <p>Email: contato@cursofrances.com</p>
+      <p>WhatsApp: (00) 90000-0000</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Institucional</h4>
+      <p>Sobre</p>
+      <p>FAQ</p>
+      <p>Política de Privacidade</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Curso de Francês — Produzido por <strong>Victorbr</strong></p>
+  </div>
+</footer>
 
 
 
-  <script>
-    const track = document.querySelector('.carousel-track');
-    const slides = Array.from(track.children);
-    const nextButton = document.querySelector('.next');
-    const prevButton = document.querySelector('.prev');
-    let currentIndex = 0;
-
-    function updateSlide(position) {
-      track.style.transform = `translateX(-${position * 100}%)`;
-    }
-
-    nextButton.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      updateSlide(currentIndex);
-    });
-
-    prevButton.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      updateSlide(currentIndex);
-    });
-
-    // Avanço automático
-    setInterval(() => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      updateSlide(currentIndex);
-    }, 5000);
-
-    document.addEventListener("scroll", function () {
-      const card = document.querySelector(".fade-in");
-      const pos = card.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-
-      if (pos < windowHeight - 100) {
-        card.classList.add("show");
-      }
-    });
-  </script>
-
+  <script src="./js/arquivo.js"></script>
 
 </body>
 
