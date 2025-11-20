@@ -274,7 +274,7 @@ nav a {
 /* seção “Como funciona / curso” */
 .course-how {
   padding: 60px 20px;
-  background-color: #dffffd;
+  background-color: #afcbdb;
 }
 
 .course-how .section-inner {
@@ -342,8 +342,8 @@ nav a {
 }
 
 .item p {
-  font-size: 0.95rem;
-  color: #555;
+  font-size: 0.98rem;
+  color: #000000;
   line-height: 1.4;
 }
 
@@ -473,8 +473,8 @@ nav a {
 
 /* Fundo da seção */
 .tipos-frances {
-  background: linear-gradient(to bottom, #113658, #1b5383);
-  color: white;
+  background: linear-gradient(to bottom, #660d0d, #971212);
+  color: rgb(255, 255, 255);
   padding: 100px 20px;
   text-align: center;
 }
@@ -494,11 +494,11 @@ nav a {
 
 /* Cards fixos */
 .card {
-  width: 320px;
-  height: 320px;
+  width: 300px;
+  height: 360px;
   /* altura fixa */
   padding: 25px;
-  border-radius: 20px;
+  border-radius: 10px;
   color: white;
   transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
@@ -508,7 +508,7 @@ nav a {
 
 /* Diferentes tons de azul */
 .card-basico {
-  background-color: #1f77b4;
+  background-color: #b41f1f;
 }
 
 .card-fluente {
@@ -516,7 +516,7 @@ nav a {
 }
 
 .card-avancado {
-  background-color: #1f77b4;
+  background-color: #b41f1f;
 }
 
 /* Hover */
@@ -880,7 +880,7 @@ nav a {
 }
 
 .problema {
-  background: linear-gradient(90deg, #0b2757 50%, #ffffff 50%);
+  background: linear-gradient(90deg, #0b2757 50%, #0b2757 50%);
   color: #fff;
   padding: 80px 20px;
   position: relative;
@@ -908,15 +908,15 @@ nav a {
 }
 
 .lado-direito {
-  background-color: #fff;
-  color: #0b2757;
+  background-color: rgba(10, 46, 109, 0.9);
+  color: #ffffff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 .problema h2 {
   font-size: 2rem;
   margin-bottom: 15px;
-  color: #e63946;
+  color: #ffffff;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -941,7 +941,7 @@ nav a {
   gap: 12px;
 }
 
-.icon {
+/* .icon {
   width: 22px;
   height: 22px;
   color: #e63946;
@@ -950,19 +950,72 @@ nav a {
 
 .icon.success {
   color: #2ecc71;
-}
+} */
 
 /* Hover */
-.lado-esquerdo:hover, .lado-direito:hover {
+/* .lado-esquerdo:hover, .lado-direito:hover {
   transform: translateY(-5px);
   transition: 0.3s ease;
+} */
+
+/* Coluna de cards */
+.cards-linha {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
 }
+
+/* Card vertical */
+.card-problema {
+  flex: 1;
+  aspect-ratio: 3 / 5; /* ← mantém retângulo em pé, SEM height fixa */
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-end;
+  padding: 15px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+/* camada escura para facilitar leitura */
+.card-problema::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.card-problema span {
+  position: relative;
+  z-index: 5;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .cards-linha {
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .card-problema {
+    font-size: 1rem;
+    aspect-ratio: 3 / 4; /* formato mais baixinho no celular */
+  }
+}
+
 
 /* === Responsivo === */
 @media (max-width: 768px) {
   .problema {
     background: #0b2757;
     padding: 60px 20px;
+    flex-direction: column;
   }
 
   .problema-container {
@@ -970,7 +1023,7 @@ nav a {
   }
 
   .lado-esquerdo, .lado-direito {
-    border-radius: 15px;
+    border-radius: 8px;
     margin-bottom: 25px;
   }
 
@@ -986,9 +1039,6 @@ nav a {
     justify-content: center;
   }
 }
-
-
-
 
 .fundo-frances {
   position: relative;
@@ -1025,7 +1075,7 @@ nav a {
 .tipos-frances.fundo-frances::before {
   content: "Français";
   bottom: 60%;
-  left: 40%;
+  left: 0%;
   font-size: 9rem;
   transform: rotate(0deg);
 }
