@@ -390,17 +390,85 @@ nav a {
 }
 
 /* responsividade para grade maior */
+/* apenas em MOBILE vira carrossel */
+@media(max-width: 767px) {
+  .itens-carousel {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 25px;
+  }
+
+  .itens-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  .item {
+    min-width: 75%;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Indicador (some no desktop) */
+  .swipe-hint {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #555;
+    justify-content: center;
+    animation: fadeIn 1s ease forwards;
+  }
+
+  .swipe-hint i {
+    animation: moveHand 1.4s infinite ease-in-out;
+    font-size: 18px;
+  }
+
+  @keyframes moveHand {
+    0% {
+      transform: translateX(0);
+    }
+
+    50% {
+      transform: translateX(8px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+/* em telas MAIORES vira grid como você já tem */
 @media(min-width:768px) {
-  .course-how .cards-grid {
+  .itens-carousel {
+    overflow: visible;
+  }
+
+  .itens-container {
+    display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+
+  .swipe-hint {
+    display: none;
   }
 }
 
 @media(min-width:1200px) {
-  .course-how .cards-grid {
+  .itens-container {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
 
 
 /* seção Sobre o professor */
@@ -905,11 +973,11 @@ nav a {
 }
 
 .lado-esquerdo {
-  background-color: rgba(10, 46, 109, 0.9);
+  background-color: #0b2757;
 }
 
 .lado-direito {
-  background-color: rgba(10, 46, 109, 0.9);
+  background-color: #0b2757;
   color: #ffffff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
@@ -969,7 +1037,8 @@ nav a {
 /* Card vertical */
 .card-problema {
   flex: 1;
-  aspect-ratio: 3 / 5; /* ← mantém retângulo em pé, SEM height fixa */
+  aspect-ratio: 3 / 5;
+  /* ← mantém retângulo em pé, SEM height fixa */
   background-size: cover;
   background-position: center;
   border-radius: 8px;
@@ -979,7 +1048,7 @@ nav a {
   color: #fff;
   font-weight: 700;
   font-size: 1.1rem;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   position: relative;
   overflow: hidden;
 }
@@ -989,7 +1058,7 @@ nav a {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0, 0, 0, 0.35);
 }
 
 .card-problema span {
@@ -1006,7 +1075,8 @@ nav a {
 
   .card-problema {
     font-size: 1rem;
-    aspect-ratio: 3 / 4; /* formato mais baixinho no celular */
+    aspect-ratio: 3 / 4;
+    /* formato mais baixinho no celular */
   }
 }
 
@@ -1023,7 +1093,8 @@ nav a {
     flex-direction: column;
   }
 
-  .lado-esquerdo, .lado-direito {
+  .lado-esquerdo,
+  .lado-direito {
     border-radius: 8px;
     margin-bottom: 25px;
   }
@@ -1032,7 +1103,8 @@ nav a {
     text-align: center;
   }
 
-  .problema p, .problema ul {
+  .problema p,
+  .problema ul {
     text-align: center;
   }
 
@@ -1091,11 +1163,15 @@ nav a {
 
 .hero-photo-wrapper {
   width: 100%;
-  max-width: 500px; /* largura máxima do vídeo */
-  aspect-ratio: 16 / 9; /* formato retangular padrão de vídeo */
-  border-radius: 15px; /* cantos arredondados */
+  max-width: 500px;
+  /* largura máxima do vídeo */
+  aspect-ratio: 16 / 9;
+  /* formato retangular padrão de vídeo */
+  border-radius: 15px;
+  /* cantos arredondados */
   overflow: hidden;
-  margin: 40px auto 30px; /* centralizado e com espaçamento */
+  margin: 40px auto 30px;
+  /* centralizado e com espaçamento */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   display: flex;
   justify-content: center;
@@ -1105,7 +1181,8 @@ nav a {
 .hero-photo-wrapper video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* preenche sem distorcer */
+  object-fit: cover;
+  /* preenche sem distorcer */
   display: block;
   border-radius: 15px;
 }
@@ -1136,7 +1213,7 @@ nav a {
   margin-bottom: 15px;
   overflow: hidden;
   transition: 0.3s;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .faq-question {
@@ -1180,7 +1257,8 @@ nav a {
 }
 
 .faq-item.active .faq-icon {
-  transform: rotate(45deg); /* vira X */
+  transform: rotate(45deg);
+  /* vira X */
 }
 
 /* section fundo preto */
@@ -1251,7 +1329,7 @@ nav a {
   max-width: 380px;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 0 8px rgba(0,0,0,0.25));
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.25));
 }
 
 /* RESPONSIVO - MOBILE */
@@ -1307,7 +1385,7 @@ nav a {
   text-align: center;
   margin-top: 30px;
   padding-top: 15px;
-  border-top: 1px solid rgba(255,255,255,0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
   font-size: 0.95rem;
   opacity: 0.9;
 }
