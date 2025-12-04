@@ -18,12 +18,6 @@ prevButton.addEventListener('click', () => {
   updateSlide(currentIndex);
 });
 
-// Avanço automático
-setInterval(() => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  updateSlide(currentIndex);
-}, 5000);
-
 document.addEventListener("scroll", function () {
   const card = document.querySelector(".fade-in");
   const pos = card.getBoundingClientRect().top;

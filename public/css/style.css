@@ -556,32 +556,33 @@ nav a {
 .cards-container {
   display: flex;
   flex-direction: column;
-  /* vertical por padrão */
+  /* Cards em coluna */
   gap: 30px;
   align-items: center;
 }
 
-/* Cards fixos */
+/* Cards */
 .card {
-  width: 300px;
-  height: 360px;
-  /* altura fixa */
+  width: 320px;
+  min-height: 360px;
   padding: 25px;
   border-radius: 10px;
   color: white;
   transition: transform 0.3s, box-shadow 0.3s;
+
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  align-items: flex-start;
+  /* 🔥 Alinhamento limpo e profissional */
+  text-align: left;
+
+  gap: 12px;
+  /* 🔥 Espaçamento interno mais bonito */
 }
 
 /* Diferentes tons de azul */
 .card-basico {
   background-color: #b41f1f;
-}
-
-.card-fluente {
-  background-color: #1f77b4;
 }
 
 .card-avancado {
@@ -605,6 +606,7 @@ nav a {
   .cards-container {
     flex-direction: row;
     justify-content: center;
+    align-items: center;
   }
 }
 
@@ -673,7 +675,7 @@ nav a {
 /* Carrossel */
 .carousel-container {
   overflow: hidden;
-  max-width: 900px;
+  max-width: 600px;
   margin: 0 auto;
   position: relative;
 }
@@ -761,7 +763,8 @@ nav a {
 
 .video-wrapper {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%;
+  /* 16:9 */
   height: 0;
   overflow: hidden;
   border-radius: 12px;
