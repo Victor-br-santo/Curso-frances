@@ -54,3 +54,14 @@ carousel.addEventListener('scroll', () => {
     removed = true;
   }
 });
+
+
+const videoHero = document.getElementById("videoPrincipal");
+const btnHero = document.getElementById("btnPlayHero");
+
+btnHero.addEventListener("click", () => {
+  videoHero.play();
+  btnHero.style.display = 'none';
+  videoHero.setAttribute('controls', 'controls');
+});
+
