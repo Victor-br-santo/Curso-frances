@@ -1194,38 +1194,21 @@ nav a {
 .hero-photo-wrapper {
   width: 100%;
   max-width: 500px;
-  /* largura máxima do vídeo */
-  aspect-ratio: 16 / 9;
-  /* formato retangular padrão de vídeo */
-  border-radius: 15px;
-  /* cantos arredondados */
-  overflow: hidden;
-  margin: 40px auto 30px;
-  /* centralizado e com espaçamento */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-photo-wrapper {
-  width: 100%;
-  max-width: 500px;
   margin: 40px auto 30px;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+
+  position: relative; /* importante: contexto para botão absoluto */
 }
 
-/* vídeo diretamente */
 .hero-photo-wrapper video {
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;  /* navegador moderno que suporta */
+  aspect-ratio: 16 / 9;
   display: block;
-  object-fit: cover; /* se quiser cobrir área e cortar bordas */
+  object-fit: cover;
 }
-
 
 .play-button {
   position: absolute;
@@ -1240,6 +1223,7 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
 }
 
 .play-button::after {
@@ -1249,14 +1233,6 @@ nav a {
   border-color: transparent transparent transparent white;
 }
 
-.hero-photo-wrapper video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* preenche sem distorcer */
-  display: block;
-  border-radius: 15px;
-}
 
 /* seção FAQ */
 .faq {
