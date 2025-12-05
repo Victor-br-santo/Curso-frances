@@ -269,6 +269,18 @@ nav a {
   .hero-cta-container {
     align-items: center;
   }
+
+  .hero-courses {
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    gap: 8px; /* espaço entre os badges */
+    flex-wrap: nowrap; /* permite quebrar se não couber */
+  }
+  .course-badge {
+    font-size: 0.8rem;  /* diminui o tamanho do texto */
+    padding: 5px 10px;  /* diminui o padding */
+    text-align: center;
+  }
 }
 
 /* seção “Como funciona / curso” */
