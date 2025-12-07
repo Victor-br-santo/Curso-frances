@@ -557,7 +557,7 @@ nav a {
 .tipos-frances {
   background: linear-gradient(to bottom, #660d0d, #971212);
   color: rgb(255, 255, 255);
-  padding: 100px 20px;
+  padding: 120px 20px;
   text-align: center;
 }
 
@@ -572,13 +572,13 @@ nav a {
   justify-content: center;
   gap: 16px;
   width: 100%;
-  max-width: 1100px; /* controla largura total do bloco */
+  max-width: 700px; /* controla largura total do bloco */
   margin: 0 auto;
 }
 @media (max-width: 767px) {
   .cards-container {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 30px;
     padding: 0 16px;
   }
 }
