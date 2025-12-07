@@ -567,22 +567,35 @@ nav a {
 
 /* Container de cards */
 .cards-container {
-  display: flex;
-  flex-direction: column;
-  /* Cards em coluna */
-  gap: 30px;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 1100px; /* controla largura total do bloco */
+  margin: 0 auto;
 }
+@media (max-width: 767px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 16px;
+  }
+}
+.card {
+  max-width: 330px; /* garante que o card não cresça demais */
+  width: 100%;
+}
+
 
 /* Cards */
 .card {
-  width: 320px;
+  width: 330px;
   min-height: 360px;
   padding: 25px;
   border-radius: 10px;
   color: white;
   transition: transform 0.3s, box-shadow 0.3s;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -614,15 +627,74 @@ nav a {
   margin-bottom: 20px;
 }
 
-/* Responsividade: em telas maiores, cards lado a lado */
-@media(min-width: 992px) {
-  .cards-container {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
+/* Rodapé dos cards */
+.card-footer {
+  margin-top: auto;
+  padding-top: 25px;
+  padding-bottom: 10px;   /* 🔥 aumenta a área inferior */
+  border-top: 2px solid rgba(255, 255, 255, 0.35); /* 🔥 linha mais visível e 100% */
+  width: 100%;            /* 🔥 garante que a linha pegue toda a largura */
+  
+  display: flex;
+  justify-content: space-between; /* 🔥 preço à esquerda, botão à direita */
+  align-items: center;
 }
 
+
+/* Preço simples (Card 1) */
+.price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Botão */
+.btn-card {
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.btn-card:hover {
+  background: #222;
+  transform: scale(1.02);
+}
+
+/* Preço com desconto (Card 2) */
+.price-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #ffb3b3;
+  font-size: 0.9rem;
+}
+
+.new-price {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.tag-oferta {
+  background: #ffcc00;
+  color: #000;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  width: fit-content;
+  font-weight: 700;
+}
+
+/* Responsivo seção Sobre o professor */
 @media (max-width: 768px) {
   .about-inner {
     position: relative;
@@ -1140,6 +1212,9 @@ nav a {
   .lado-direito {
     border-radius: 8px;
     margin-bottom: 25px;
+    & span{
+      font-size: 18px;
+    }
   }
 
   .problema h2 {
