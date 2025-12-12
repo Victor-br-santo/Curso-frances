@@ -1,0 +1,184 @@
+/* --- FUNDO E ESTRUTURA GERAL --- */
+.why-choose-section {
+    background: linear-gradient(135deg, #004e92 0%, #000428 100%); /* Fundo Azul */
+    padding: 100px 0;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Títulos */
+.section-title {
+    margin-bottom: 70px;
+    position: relative;
+    z-index: 2;
+}
+
+.section-title h2 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+.section-title span.subtitle {
+    color: #00d2ff;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* --- ESTILO DOS ITENS (COMUM) --- */
+.extra-icon-text {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Ícone */
+.features-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.features-icon i {
+    font-size: 30px;
+    color: #00d2ff;
+}
+
+.features-icon:hover {
+    background: #00d2ff;
+}
+.features-icon:hover i {
+    color: #fff;
+}
+
+/* Tag de número */
+.feat-tag {
+    position: absolute;
+    top: -5px;
+    right: -5px; /* Padrão para itens normais */
+    background: #00d2ff;
+    color: #000;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Texto */
+.features-text-title h3 {
+    font-size: 1.4rem;
+    margin: 0 0 10px 0;
+    color: #fff;
+}
+.features-text-dec span {
+    color: #d1e8ff;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Imagem Central */
+.extra-pic {
+    text-align: center;
+    padding: 0 10px;
+}
+.extra-pic img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.5));
+}
+
+
+/* ==================================================
+   LAYOUT DESKTOP E TABLET GRANDE (Acima de 992px)
+   ================================================== */
+@media (min-width: 992px) {
+    .extra-features-content .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .col-md-4 {
+        width: 32%;
+    }
+
+    /* Lado Esquerdo: Ícone -> Texto */
+    .extra-left .extra-icon-text {
+        flex-direction: row; 
+        text-align: left;
+    }
+
+    /* Lado Direito: Texto -> Ícone */
+    .extra-right .extra-icon-text {
+        flex-direction: row-reverse; 
+        text-align: right; 
+    }
+    
+    /* Ajuste da bolinha do número para o lado direito */
+    .extra-right .feat-tag {
+        left: -5px; 
+        right: auto;
+    }
+}
+
+
+/* ==================================================
+   LAYOUT CELULAR / TABLET PEQUENO (Abaixo de 991px)
+   ================================================== */
+@media (max-width: 991px) {
+    
+    .extra-features-content .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col-md-4, .col-sm-6, .col-sm-4 {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    /* Espaçamento da imagem no meio */
+    .extra-pic {
+        margin: 50px 0;
+    }
+
+    /* --- PARTE DE CIMA (Itens 1, 2, 3) --- */
+    /* Mantém o padrão: Ícone na esquerda */
+    .extra-left .extra-icon-text {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    /* --- PARTE DE BAIXO (Itens 4, 5, 6) --- */
+    /* Inverte: Texto na esquerda, Ícone na direita */
+    .extra-right .extra-icon-text {
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+
+    /* Ajuste da bolinha do número para os itens de baixo */
+    .extra-right .feat-tag {
+        left: -5px;
+        right: auto;
+    }
+}
