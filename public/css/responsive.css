@@ -1,7 +1,7 @@
 /* --- FUNDO E ESTRUTURA GERAL --- */
 .why-choose-section {
     background: linear-gradient(135deg, #004e92 0%, #000428 100%); /* Fundo Azul */
-    padding: 100px 0;
+    padding-top: 100px ;
     color: #fff;
     font-family: 'Arial', sans-serif;
     overflow-x: hidden;

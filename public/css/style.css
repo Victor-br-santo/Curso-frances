@@ -6,7 +6,6 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
   background-color: #ffffff;
   color: #222;
   overflow-x: hidden;
@@ -145,7 +144,8 @@ a {
 
   .hero-photo-wrapper {
     width: 100%;
-    max-width: 350px;   /* diminui no mobile, mas sem cortar nada */
+    max-width: 350px;
+    /* diminui no mobile, mas sem cortar nada */
     height: auto;
   }
 
@@ -162,13 +162,19 @@ a {
 
   .hero-courses {
     display: flex;
-    justify-content: center; /* centraliza horizontalmente */
-    gap: 8px; /* espaço entre os badges */
-    flex-wrap: nowrap; /* permite quebrar se não couber */
+    justify-content: center;
+    /* centraliza horizontalmente */
+    gap: 8px;
+    /* espaço entre os badges */
+    flex-wrap: nowrap;
+    /* permite quebrar se não couber */
   }
+
   .course-badge {
-    font-size: 0.8rem;  /* diminui o tamanho do texto */
-    padding: 5px 10px;  /* diminui o padding */
+    font-size: 0.8rem;
+    /* diminui o tamanho do texto */
+    padding: 5px 10px;
+    /* diminui o padding */
     text-align: center;
     align-items: center;
   }
@@ -177,7 +183,7 @@ a {
 /* seção “Como funciona / curso” */
 .course-how {
   padding: 60px 20px;
-  background-color: #afcbdb;
+  background-color: #1c2225;
 }
 
 .course-how .section-inner {
@@ -188,7 +194,7 @@ a {
 
 .course-how h2 {
   font-size: 2rem;
-  color: #003366;
+  color: #e7e7e7;
   margin-bottom: 50px;
 }
 
@@ -215,7 +221,7 @@ a {
   align-items: center;
   margin-bottom: 20px;
   font-size: 2rem;
-  color: #fff;
+  color: #e7e7e7;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -240,13 +246,13 @@ a {
 
 .item h3 {
   font-size: 1.2rem;
-  color: #003366;
+  color: #e7e7e7;
   margin-bottom: 10px;
 }
 
 .item p {
   font-size: 0.98rem;
-  color: #000000;
+  color: #ffffff;
   line-height: 1.4;
 }
 
@@ -269,7 +275,7 @@ a {
     min-width: 75%;
     flex-shrink: 0;
     scroll-snap-align: start;
-    background: #fff;
+    background: #000000;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -402,9 +408,12 @@ a {
 }
 
 /* Fundo da seção */
+/* =========================
+   SEÇÃO
+========================= */
 .tipos-frances {
   background: linear-gradient(to bottom, #660d0d, #971212);
-  color: rgb(255, 255, 255);
+  color: #fff;
   padding: 120px 20px;
   text-align: center;
 }
@@ -413,90 +422,115 @@ a {
   margin-bottom: 50px;
 }
 
-/* Container de cards */
+/* =========================
+   GRID PRINCIPAL
+========================= */
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  justify-content: center;
-  gap: 16px;
-  width: 100%;
-  max-width: 700px; /* controla largura total do bloco */
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 20px;
+  max-width: 900px;
   margin: 0 auto;
 }
-@media (max-width: 767px) {
-  .cards-container {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 0 16px;
-  }
-}
+
+/* =========================
+   CARD
+========================= */
 .card {
-  max-width: 330px; /* garante que o card não cresça demais */
+  max-width: 330px;
   width: 100%;
-}
-
-
-/* Cards */
-.card {
-  width: 330px;
   min-height: 360px;
   padding: 25px;
   border-radius: 10px;
-  color: white;
-  transition: transform 0.3s, box-shadow 0.3s;
+  background: #b41f1f;
+  color: #fff;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  /* 🔥 Alinhamento limpo e profissional */
   text-align: left;
-
   gap: 12px;
-  /* 🔥 Espaçamento interno mais bonito */
+
+  transition: 0.3s ease;
 }
 
-/* Diferentes tons de azul */
-.card-basico {
-  background-color: #b41f1f;
-}
-
-.card-avancado {
-  background-color: #b41f1f;
-}
-
-/* Hover */
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Ícone */
+/* =========================
+   HIERARQUIA VISUAL
+========================= */
+.card-avancado {
+  transform: scale(1.05);
+}
+
+.card-basico {
+  opacity: 0.9;
+}
+
+/* =========================
+   ÍCONE
+========================= */
 .card-icon {
   font-size: 3rem;
   margin-bottom: 20px;
 }
 
-/* Rodapé dos cards */
+/* =========================
+   RODAPÉ DO CARD
+========================= */
 .card-footer {
   margin-top: auto;
   padding-top: 25px;
-  padding-bottom: 10px;   /* 🔥 aumenta a área inferior */
-  border-top: 2px solid rgba(255, 255, 255, 0.35); /* 🔥 linha mais visível e 100% */
-  width: 100%;            /* 🔥 garante que a linha pegue toda a largura */
-  
+  border-top: 2px solid rgba(255, 255, 255, 0.35);
+  width: 100%;
+
   display: flex;
-  justify-content: space-between; /* 🔥 preço à esquerda, botão à direita */
+  justify-content: space-between;
   align-items: center;
 }
 
-
-/* Preço simples (Card 1) */
+/* =========================
+   PREÇOS
+========================= */
 .price {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #ffffff;
 }
 
-/* Botão */
+.price-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.old-price {
+  font-size: 0.9rem;
+  text-decoration: line-through;
+  color: #ffb3b3;
+}
+
+.new-price {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.tag-oferta {
+  background: #ffcc00;
+  color: #000;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 700;
+  width: fit-content;
+}
+
+/* =========================
+   BOTÃO
+========================= */
 .btn-card {
   background: #000;
   color: #fff;
@@ -513,34 +547,44 @@ a {
   transform: scale(1.02);
 }
 
-/* Preço com desconto (Card 2) */
-.price-box {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+/* =========================
+   BLOCO CONECTOR (SETA)
+========================= */
+.card-connector {
+  text-align: center;
+  font-weight: 600;
+  opacity: 0.9;
 }
 
-.old-price {
-  text-decoration: line-through;
-  color: #ffb3b3;
-  font-size: 0.9rem;
+.card-connector span {
+  font-size: 2rem;
+  display: block;
 }
 
-.new-price {
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: #ffffff;
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 767px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 16px;
+  }
+
+  .card-avancado {
+    order: 1;
+    transform: none;
+  }
+
+  .card-connector {
+    order: 2;
+  }
+
+  .card-basico {
+    order: 3;
+  }
 }
 
-.tag-oferta {
-  background: #ffcc00;
-  color: #000;
-  font-size: 0.75rem;
-  padding: 2px 6px;
-  border-radius: 4px;
-  width: fit-content;
-  font-weight: 700;
-}
 
 /* Responsivo seção Sobre o professor */
 @media (max-width: 768px) {
@@ -592,7 +636,7 @@ a {
 
 .testimonials {
   padding: 80px 20px;
-  background: linear-gradient(to bottom, #001f3f, #000);
+  background: linear-gradient(to bottom, #001f3f, #0a2e6d);
   color: #fff;
   text-align: center;
   position: relative;
@@ -622,7 +666,7 @@ a {
 .testimonial {
   min-width: 100%;
   box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   padding: 40px 30px;
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
@@ -1060,7 +1104,8 @@ a {
   .lado-direito {
     border-radius: 8px;
     margin-bottom: 25px;
-    & span{
+
+    & span {
       font-size: 18px;
     }
   }
@@ -1111,13 +1156,13 @@ a {
   transform: rotate(8deg);
 }
 
-.tipos-frances.fundo-frances::before {
+/* .tipos-frances.fundo-frances::before {
   content: "Français";
   bottom: 70%;
   left: 40%;
   font-size: 9rem;
   transform: rotate(0deg);
-}
+} */
 
 .depoimentos.fundo-frances::before {
   content: "Liberté Éducation";
@@ -1134,9 +1179,12 @@ a {
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-  position: relative; /* importante: contexto para botão absoluto */
-  display: flex;            /* 🔥 necessário */
-  flex-direction: column;   /* 🔥 faz o botão ir PARA BAIXO do vídeo */
+  position: relative;
+  /* importante: contexto para botão absoluto */
+  display: flex;
+  /* 🔥 necessário */
+  flex-direction: column;
+  /* 🔥 faz o botão ir PARA BAIXO do vídeo */
   align-items: center;
 }
 
@@ -1385,4 +1433,50 @@ a {
   .footer-col {
     margin-bottom: 25px;
   }
+}
+/* ===========================
+   ESTILO GLOBAL PARA H2
+   =========================== */
+
+/* Contêiner que garante centralização TOTAL */
+.h2-wrapper {
+  text-align: center;    /* 🔥 Centraliza tudo dentro */
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* Subtítulo com bolinhas */
+.h2-subtitle {
+  display: inline-flex;       /* 🔥 Mantém as bolinhas alinhadas ao texto */
+  align-items: center;
+  justify-content: center;    /* 🔥 Centraliza horizontalmente */
+  gap: 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin: 0 auto 10px auto;   /* 🔥 Centraliza o bloco */
+}
+
+/* Bolinhas */
+.h2-subtitle::before,
+.h2-subtitle::after {
+  content: "••";
+  font-size: 1.1rem;
+  color: #ffffffaa;
+}
+
+/* H2 principal */
+.h2-decorado {
+  text-align: center;   /* 🔥 Garantia */
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 auto 40px auto;  /* 🔥 Garantia de centralização */
+}
+
+/* Parte destacada (span) */
+.h2-decorado span {
+  font-weight: 900;
+  color: #ffffff;
 }

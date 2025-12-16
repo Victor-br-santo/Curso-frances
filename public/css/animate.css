@@ -1,0 +1,41 @@
+section {
+    margin: 0;
+    padding: 0;
+}
+
+.faixa-franca {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(to right, #002395, white, #ed2939); /* azul → branco → vermelho */
+  padding: 18px 0;
+  margin-top: 5px;   /* distância da section de cima */
+  margin-bottom: 5px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.faixa-scroll {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #002244; /* azul escuro para legibilidade */
+  animation: faixa-mover 12s linear infinite;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* animação */
+@keyframes faixa-mover {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .faixa-franca {
+    padding: 8px 0;
+  }
+  .faixa-scroll {
+    font-size: 0.95rem;
+  }
+}
