@@ -27,16 +27,26 @@
         </div>
       </div>
       <div class="hero-photo-wrapper">
-        <video id="videoPrincipal" poster="/videos/thumb.jpg" playsinline>
-          <source src="./videos/videoPrincipal.mp4" type="video/mp4">
-        </video>
-        <div class="play-button" id="btnPlayHero"></div>
+        <!-- 🔥 wrapper só do vídeo -->
+        <div class="video-wrapper">
+          <div class="video-thumb"></div>
+
+          <video id="videoPrincipal" playsinline controls>
+            <source src="./videos/videoPrincipal.mp4" type="video/mp4">
+          </video>
+
+          <div class="play-button" id="btnPlayHero"></div>
+        </div>
+
+        <!-- CTA fica fora -->
         <div class="hero-cta-container">
           <a href="https://go.hotmart.com/F103123069W?dp=1">
             <button class="btn-cta">Quero Garantir Minha Vaga</button>
           </a>
         </div>
+
       </div>
+
   </section>
 
   <div class="faixa-franca">
@@ -226,10 +236,12 @@
   </section>
   <!-- Seção dos Tipos de Francês - Cards Verticais Fixos -->
   <section id="tipos" class="tipos-frances fundo-frances">
-    <div class="container section-title mb20 headline text-center">
-      <div class="h2-wrapper">
-        <span class="h2-subtitle text-uppercase">VANTAGENS PREMIER PAS FRANÇAIS</span>
-        <h2 class="h2-decorado">Razões <span>Para escolher o Premier</span></h2>
+    <div class="container">
+      <div class="section-title mb20 headline text-center">
+        <div class="h2-wrapper">
+          <span class="h2-subtitle text-uppercase">FORMAÇÃO PREMIER PAS FRANÇAIS</span>
+          <h2 class="h2-decorado"><span>Formação principal e bônus complementar</span></h2>
+        </div>
       </div>
       <div class="cards-container">
 
@@ -319,7 +331,7 @@
           </div>
 
           <div class="item">
-            <div class="icon-circle azul-claro">
+            <div class="icon-circle azul">
               <i class="fas fa-tasks"></i>
             </div>
             <h3>20 exercícios práticos</h3>
@@ -343,7 +355,7 @@
           </div>
 
           <div class="item">
-            <div class="icon-circle azul-claro">
+            <div class="icon-circle vermelho">
               <i class="fas fa-globe"></i>
             </div>
             <h3>Conteúdo cultural</h3>
@@ -430,7 +442,8 @@
       </div>
       <div class="about-content">
         <h2>Sobre o Professor</h2>
-        <p>Olá, eu sou [Nome], apaixonado por francês e por ensinar. Tenho anos de experiência ajudando alunos a
+        <p>Olá, eu sou Chrisland Junior, apaixonado por francês e por ensinar. Tenho anos de experiência ajudando alunos
+          a
           dominarem o idioma com métodos simples, objetivos e envolventes. Acredito que aprender francês pode ser
           natural, divertido e possível para qualquer pessoa.</p>
       </div>

@@ -15,14 +15,14 @@
 
 /* Títulos */
 .section-title {
-    margin-bottom: 70px;
+    margin-bottom: 85px;
     position: relative;
     z-index: 2;
 }
 
 .section-title h2 {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 2.8rem;
+    font-weight: 100;
 }
 .section-title span.subtitle {
     color: #00d2ff;
