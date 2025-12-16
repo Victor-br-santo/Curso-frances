@@ -1493,3 +1493,14 @@ a {
   font-weight: 900;
   color: #ffffff;
 }
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
